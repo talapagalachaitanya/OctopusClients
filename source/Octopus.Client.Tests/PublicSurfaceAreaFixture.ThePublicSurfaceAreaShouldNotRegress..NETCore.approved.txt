@@ -80,7 +80,6 @@ Octopus.Client
     Octopus.Client.Repositories.Async.ITagSetRepository TagSets { get; }
     Octopus.Client.Repositories.Async.ITaskRepository Tasks { get; }
     Octopus.Client.Repositories.Async.ITeamsRepository Teams { get; }
-    Octopus.Client.Repositories.Async.ITeamsV2Repository TeamsV2 { get; }
     Octopus.Client.Repositories.Async.ITenantRepository Tenants { get; }
     Octopus.Client.Repositories.Async.IUserRolesRepository UserRoles { get; }
     Octopus.Client.Repositories.Async.IUserRepository Users { get; }
@@ -164,7 +163,6 @@ Octopus.Client
     Octopus.Client.Repositories.Async.ITagSetRepository TagSets { get; }
     Octopus.Client.Repositories.Async.ITaskRepository Tasks { get; }
     Octopus.Client.Repositories.Async.ITeamsRepository Teams { get; }
-    Octopus.Client.Repositories.Async.ITeamsV2Repository TeamsV2 { get; }
     Octopus.Client.Repositories.Async.ITenantRepository Tenants { get; }
     Octopus.Client.Repositories.Async.IUserRolesRepository UserRoles { get; }
     Octopus.Client.Repositories.Async.IUserRepository Users { get; }
@@ -3041,27 +3039,6 @@ Octopus.Client.Model
     Boolean CanBeRenamed { get; set; }
     Boolean CanChangeMembers { get; set; }
     Boolean CanChangeRoles { get; set; }
-    Octopus.Client.Model.ReferenceCollection EnvironmentIds { get; set; }
-    Octopus.Client.Model.NamedReferenceItemCollection ExternalSecurityGroups { get; set; }
-    Octopus.Client.Model.ReferenceCollection MemberUserIds { get; set; }
-    String Name { get; set; }
-    Octopus.Client.Model.ReferenceCollection ProjectGroupIds { get; set; }
-    Octopus.Client.Model.ReferenceCollection ProjectIds { get; set; }
-    Octopus.Client.Model.ReferenceCollection TenantIds { get; set; }
-    Octopus.Client.Model.ReferenceCollection TenantTags { get; set; }
-    Octopus.Client.Model.ReferenceCollection UserRoleIds { get; set; }
-  }
-  class TeamV2Resource
-    Octopus.Client.Extensibility.IResource
-    Octopus.Client.Model.IAuditedResource
-    Octopus.Client.Extensibility.INamedResource
-    Octopus.Client.Model.Resource
-  {
-    .ctor()
-    Boolean CanBeDeleted { get; set; }
-    Boolean CanBeRenamed { get; set; }
-    Boolean CanChangeMembers { get; set; }
-    Boolean CanChangeRoles { get; set; }
     Octopus.Client.Model.NamedReferenceItemCollection ExternalSecurityGroups { get; set; }
     Octopus.Client.Model.ReferenceCollection MemberUserIds { get; set; }
     String Name { get; set; }
@@ -4305,15 +4282,6 @@ Octopus.Client.Repositories.Async
     Octopus.Client.Repositories.Async.IFindByName<TeamResource>
     Octopus.Client.Repositories.Async.IPaginate<TeamResource>
     Octopus.Client.Repositories.Async.IGet<TeamResource>
-  {
-  }
-  interface ITeamsV2Repository
-    Octopus.Client.Repositories.Async.ICreate<TeamV2Resource>
-    Octopus.Client.Repositories.Async.IModify<TeamV2Resource>
-    Octopus.Client.Repositories.Async.IDelete<TeamV2Resource>
-    Octopus.Client.Repositories.Async.IFindByName<TeamV2Resource>
-    Octopus.Client.Repositories.Async.IPaginate<TeamV2Resource>
-    Octopus.Client.Repositories.Async.IGet<TeamV2Resource>
   {
   }
   interface ITenantRepository

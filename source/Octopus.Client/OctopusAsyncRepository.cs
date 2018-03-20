@@ -69,7 +69,6 @@ namespace Octopus.Client
             TagSets = new TagSetRepository(client);
             Tasks = new TaskRepository(client);
             Teams = new TeamsRepository(client);
-            TeamsV2 = new TeamsV2Repository(client);
             Tenants = new TenantRepository(client);
             UserRoles = new UserRolesRepository(client);
             Users = new UserRepository(client);
@@ -117,7 +116,6 @@ namespace Octopus.Client
         public ITagSetRepository TagSets { get; }
         public ITaskRepository Tasks { get; }
         public ITeamsRepository Teams { get; }
-        public ITeamsV2Repository TeamsV2 { get; }
         public ITenantRepository Tenants { get; }
         public IUserRepository Users { get; }
         public IUserRolesRepository UserRoles { get; }
